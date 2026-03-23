@@ -3,6 +3,11 @@
 // กำหนด root ของ project
 define('LARAVEL_START', microtime(true));
 
+// Force HTTPS บน Vercel
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
+
 // Vercel เก็บ vendor ที่ /var/task
 require __DIR__ . '/../vendor/autoload.php';
 
