@@ -4,7 +4,7 @@ export default function HeadComponent() {
     return (
         <>
             <Head>
-                <title>VeloColla+ Demo1</title>
+                <title>VeloColla+</title>
                 <meta
                     name="description"
                     content="Multivitamin & Collagen Premium ผลิตภัณฑ์เสริมอาหารยอดขายอันดับ 1 สารสกัดพรีเมียมจากญี่ปุ่น เห็นผลใน 14 วัน การันตีด้วยรีวิวกว่า 10,000 ราย"

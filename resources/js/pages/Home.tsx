@@ -11,7 +11,7 @@ import HeadComponent from '@/Components/Home/Head';
 export default function HomePage() {
     return (
         <>
-           <HeadComponent/>
+            <HeadComponent />
             <div className="bg-gradient-to-br from-rose-50 via-white to-pink-50 font-sans">
                 <Header />
                 <main className="container mx-auto max-w-7xl px-4 py-6 md:py-10">
