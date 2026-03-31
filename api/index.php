@@ -3,6 +3,17 @@
 // กำหนด root ของ project
 define('LARAVEL_START', microtime(true));
 
+if (php_sapi_name() !== 'cli') {
+    // รันเฉพาะตอน web request ไม่รันตอน artisan CLI
+    if (!is_dir('/tmp/storage/framework/sessions')) {
+        @mkdir('/tmp/storage/framework/sessions', 0777, true);
+        @mkdir('/tmp/storage/framework/views', 0777, true);
+        @mkdir('/tmp/storage/framework/cache', 0777, true);
+        @mkdir('/tmp/storage/framework/cache/data', 0777, true);
+        @mkdir('/tmp/storage/logs', 0777, true);
+    }
+}
+
 // Force HTTPS บน Vercel
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
     $_SERVER['HTTPS'] = 'on';
